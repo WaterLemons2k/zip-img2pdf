@@ -14,5 +14,6 @@ updates:
     directory: /
     schedule:
       interval: daily
-    ignore:
-      - dependency-name: pillow # The new version of pillow dropped support for Python 3.8
+    # Force dependabot to completely skip
+    exclude-paths:
+      - /

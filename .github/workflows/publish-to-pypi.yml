@@ -2,8 +2,7 @@ name: Publish Python distribution to PyPI
 
 on:
   push:
-    tags:
-      - '*'
+  pull_request:
 
 permissions:
   contents: read

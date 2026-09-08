@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# uv / venv
+.venv/
+venv/
+
+# ruff
+.ruff_cache/
+
+# build artifacts
+build/
+dist/
+
+# temporary files
+.tmp/

@@ -1,0 +1,29 @@
+[project]
+name = "zip-img2pdf"
+version = "1.0.0"
+description = "Lossless conversion of raster images in a zip archive to PDF. (based on img2pdf)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "WaterLemons2k" }]
+dependencies = ["img2pdf>=0.6.3", "tqdm>=4.70.0"]
+
+[project.scripts]
+zip-img2pdf = "zip_img2pdf:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["zip_img2pdf"]
+
+[tool.ruff.lint.per-file-ignores]
+# The entry function deliberately catches broad exceptions to produce a clean exit message; keep as-is
+"zip_img2pdf/cli.py" = ["BLE001"]
+"zip_img2pdf/images.py" = ["BLE001"]
+"zip_img2pdf/utils.py" = ["BLE001"]
+
+[dependency-groups]
+dev = ["pytest", "pyzipper", "pikepdf", "pillow", "ruff", "pytest-randomly"]

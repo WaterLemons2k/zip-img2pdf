@@ -15,5 +15,5 @@ updates:
     schedule:
       interval: daily
     # Force dependabot to completely skip
-    exclude-paths:
-      - /
+    ignore:
+      - dependency-name: '*'
